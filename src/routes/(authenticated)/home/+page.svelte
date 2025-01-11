@@ -74,7 +74,9 @@
         closeAddModalBtn.click();
         searchText = "";
         await update();
-        goto("?page=1");
+        if(!filteredData?.length){
+          goto("?page=1");
+        }
       }
       loading = false;
     };
