@@ -1,6 +1,13 @@
+
+
 # Sveltekit Responsive Dashboard
 
 Uses SvelteKit, Supabase, Bootstrap 5
+
+
+Thanks to:
+Jason Creviston
+https://github.com/j4w8n/sveltekit-supabase-ssr
 
 ## Features
 
