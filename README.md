@@ -25,6 +25,7 @@ https://github.com/j4w8n/sveltekit-supabase-ssr
 
 1. A Supabase account.
 2. A Supabase project.
+3. Create expenses table in supabase with id, activity, created_at, user_id, amount columns
 
 ## Install
 
