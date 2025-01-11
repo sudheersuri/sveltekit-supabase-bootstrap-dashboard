@@ -29,36 +29,9 @@ export const handle: Handle = async ({ event, resolve }) => {
 
     if (!session) return null
 
-    /**
-     * Ensures the session is fully validated. See README Security section for details.
-     * 
-     * !!! Simply verifying the JWT does not validate the `session.user` object for use. !!!
-     * See "False Security" in https://github.com/orgs/supabase/discussions/23224
-     * The safest and easiest way to validate the session is by calling `getUser()`
-     * and using it's returned data. An alternative, which does not make a network call, 
-     * is to create a validated session; which we do below. 
-     */
+  
     try {
       const { payload: decoded }: { payload: SupabaseJwt } = await jose.jwtVerify(session.access_token, new TextEncoder().encode(JWT_SECRET))
-
-      /**
-       * Create a validated session.
-       * 
-       * Most of these properties are required for functionality or typing.
-       * Add any data needed for your layouts or pages.
-       * 
-       * Here are the properties which aren't required:
-       * `user.user_metadata.avatar_url`
-       * `user.user_metadata.nickname`
-       * `user.email`
-       * `user.phone`
-       * 
-       * If not used, `user.user_metadata` should be an empty object.
-       * 
-       * If possible, avoid using anything from `session.user` to populate these,
-       * especially unique user data like `id`, an email address, or any other
-       * user-unique data for queries.
-       */
       const validated_session: Session = {
         access_token: session.access_token,
         refresh_token: session.refresh_token,

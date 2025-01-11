@@ -1,6 +1,8 @@
 import { Fail } from '$lib/utils';
 import { redirect } from '@sveltejs/kit';
 
+const TABLE_NAME = 'expenses'; // Replace 'table_name' with your table name
+
 export async function load({url, locals: { supabase, getSession }}){
     const searchText = url.searchParams.get('search')?.trim() || '';
     const page = parseInt(url.searchParams.get('page') || '1', 10) ?? 1;
@@ -9,7 +11,7 @@ export async function load({url, locals: { supabase, getSession }}){
     const to = from + itemsPerPage - 1;
     const session = await getSession();
     let query =  supabase
-        .from('expenses')
+        .from(TABLE_NAME)
         .select('*', { count: "exact" })
         .eq('user_id', session?.user.id)
         .order('created_at', { ascending: false })
