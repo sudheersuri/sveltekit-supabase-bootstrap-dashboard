@@ -4,6 +4,7 @@
 
 Uses SvelteKit, Supabase, Bootstrap 5
 
+[Click here to watch demo](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
 Thanks to:
 Jason Creviston
