@@ -6,6 +6,38 @@ Uses SvelteKit, Supabase, Bootstrap 5
 
 [Click here to watch demo](https://www.youtube.com/watch?v=KniBym_hbYk)
 
+# Screenshots
+
+Here are some screenshots of the project:
+
+## Login
+![Screenshot 1](screenshots/8.png)
+
+## Registration
+![Screenshot 1](screenshots/9.png)
+
+## Home page
+![Screenshot 1](screenshots/1.png)
+
+## Add modal
+![Screenshot 2](screenshots/2.png)
+
+## Menu actions
+![Screenshot 3](screenshots/3.png)
+
+## Edit modal
+![Screenshot 4](screenshots/4.png)
+
+## Responsive mobile sidebar
+![Screenshot 5](screenshots/5.png)
+
+## Profile page
+![Screenshot 6](screenshots/6.png)
+
+## Sortable columns
+![Screenshot 7](screenshots/7.png)
+
+
 Thanks to:
 Jason Creviston
 https://github.com/j4w8n/sveltekit-supabase-ssr
